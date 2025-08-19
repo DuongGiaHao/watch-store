@@ -11,26 +11,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = trim($_POST['phone'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    // Validate
-    if ($name === '' || $email === '' || $phone === '' || $password === '') {
-        $error = 'Please fill in all fields.';
+  // Validate
+  if ($name === '' || $email === '' || $phone === '' || $password === '') {
+    $error = 'Please fill in all fields.';
+  } else {
+    // Check if email or phone already exists
+    $stmt = $pdo->prepare('SELECT id FROM users WHERE email = ? OR phone = ?');
+    $stmt->execute([$email, $phone]);
+    if ($stmt->fetch()) {
+      $error = 'Email or phone number is already registered.';
     } else {
-        // Check if email or phone already exists
-        $stmt = $pdo->prepare('SELECT id FROM users WHERE email = ? OR phone = ?');
-        $stmt->execute([$email, $phone]);
-        if ($stmt->fetch()) {
-            $error = 'Email or phone number is already registered.';
-        } else {
-            // Hash password
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $pdo->prepare('INSERT INTO users (name, email, phone, password) VALUES (?, ?, ?, ?)');
-            if ($stmt->execute([$name, $email, $phone, $hashedPassword])) {
-                $success = 'Registration successful! You can log in.';
-            } else {
-                $error = 'Registration failed. Please try again.';
-            }
-        }
+      // Hash password
+      $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+      $stmt = $pdo->prepare('INSERT INTO users (name, email, phone, password) VALUES (?, ?, ?, ?)');
+      if ($stmt->execute([$name, $email, $phone, $hashedPassword])) {
+        header('Location: authentication-login.php?register=success');
+        exit;
+      } else {
+        $error = 'Registration failed. Please try again.';
+      }
     }
+  }
 }
 ?>
 

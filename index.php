@@ -217,7 +217,7 @@ include 'header.php';
                   <div class="position-relative overflow-hidden">
                     <div class="product-options d-flex align-items-center justify-content-center gap-2 mx-auto position-absolute bottom-0 start-0 end-0">
                       <a href="javascript:;"><i class="bi bi-heart"></i></a>
-                      <a href="javascript:;"><i class="bi bi-basket3"></i></a>
+                      <button type="button" class="btn btn-sm btn-dark add-to-cart-btn" data-id="<?= $p['id'] ?>"><i class="bi bi-basket3"></i></button>
                     </div>
                     <a href="product-details.php?id=<?= $p['id'] ?>">
                       <?php if ($p['thumbnail']): ?>

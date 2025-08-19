@@ -76,11 +76,11 @@ $images = $img_stmt->fetchAll();
             <div class="product-price d-flex align-items-center gap-3">
               <div class="h4 fw-bold">$<?= number_format($product['price'], 2, ',', '.') ?></div>
             </div>
-            <p class="fw-bold mb-0 mt-1 text-success">Còn <?= $product['stock'] ?> Products</p>
+            <p class="fw-bold mb-0 mt-1 text-success">Stock <?= $product['stock'] ?> Products</p>
             <div class="cart-buttons mt-3">
               <div class="buttons d-flex flex-column flex-lg-row gap-3 mt-4">
-                <button type="button" id="addToCartBtn" class="btn btn-lg btn-dark btn-ecomm px-5 py-3 col-lg-6"><i class="bi bi-basket2 me-2"></i>Thêm vào giỏ</button>
-                <a href="javascript:;" class="btn btn-lg btn-outline-dark btn-ecomm px-5 py-3"><i class="bi bi-suit-heart me-2"></i>Yêu thích</a>
+                <button type="button" id="addToCartBtn" class="btn btn-lg btn-dark btn-ecomm px-5 py-3 col-lg-6"><i class="bi bi-basket2 me-2"></i>Add to cart</button>
+                <a href="javascript:;" class="btn btn-lg btn-outline-dark btn-ecomm px-5 py-3"><i class="bi bi-suit-heart me-2"></i>Add to Wishlist</a>
               </div>
             </div>
             <hr class="my-3">
@@ -119,311 +119,57 @@ $images = $img_stmt->fetchAll();
                     <div class=""><i class="bi bi-star"></i></div>
                     <div class="progress flex-grow-1 mb-0 rounded-0" style="height: 4px;">
                       <div class="progress-bar bg-info" role="progressbar" style="width: 45%"></div>
-                    </div>
-                    <p class="mb-0">258</p>
-                  </div>
-                  <div class="rating-wrrap hstack gap-2 align-items-center">
-                    <p class="mb-0">2</p>
-                    <div class=""><i class="bi bi-star"></i></div>
-                    <div class="progress flex-grow-1 mb-0 rounded-0" style="height: 4px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 35%"></div>
-                    </div>
-                    <p class="mb-0">78</p>
-                  </div>
-                  <div class="rating-wrrap hstack gap-2 align-items-center">
-                    <p class="mb-0">1</p>
-                    <div class=""><i class="bi bi-star"></i></div>
-                    <div class="progress flex-grow-1 mb-0 rounded-0" style="height: 4px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%"></div>
-                    </div>
-                    <p class="mb-0">27</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <hr class="my-3">
-            <div class="customer-reviews">
-              <h6 class="fw-bold mb-3">Customer Reviews (875)</h6>
-              <div class="reviews-wrapper">
-                <div class="d-flex flex-column flex-lg-row gap-3">
-                  <div class=""><span class="badge bg-green rounded-0">5<i class="bi bi-star-fill ms-1"></i></span></div>
-                  <div class="flex-grow-1">
-                    <p class="mb-2">This is some content from a media component. You can replace this with any content and adjust it as needed. Some quick example text to build on the card title and make.</p>
-                    <div class="review-img">
-                      <img src="assets/images/featured-products/05.webp" alt="" width="70">
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
-                      <div class="hstack flex-grow-1 gap-3">
-                        <p class="mb-0">Jhon Deo</p>
-                        <div class="vr"></div>
-                        <div class="date-posted">12 June 2020</div>
-                      </div>
-                      <div class="hstack">
-                        <div class=""><i class="bi bi-hand-thumbs-up me-2"></i>68</div>
-                        <div class="mx-3"></div>
-                        <div class=""><i class="bi bi-hand-thumbs-down me-2"></i>24</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="d-flex flex-column flex-lg-row gap-3">
-                  <div class=""><span class="badge bg-green rounded-0">4<i class="bi bi-star-fill ms-1"></i></span></div>
-                  <div class="flex-grow-1">
-                    <p class="mb-2">This is some content from a media component. You can replace this with any content.</p>
-                    <div class="review-img">
-                      <img src="assets/images/featured-products/02.webp" alt="" width="70">
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
-                      <div class="hstack flex-grow-1 gap-3">
-                        <p class="mb-0">Jhon Deo</p>
-                        <div class="vr"></div>
-                        <div class="date-posted">15 June 2020</div>
-                      </div>
-                      <div class="hstack">
-                        <div class=""><i class="bi bi-hand-thumbs-up me-2"></i>58</div>
-                        <div class="mx-3"></div>
-                        <div class=""><i class="bi bi-hand-thumbs-down me-2"></i>34</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="d-flex flex-column flex-lg-row gap-3">
-                  <div class=""><span class="badge bg-warning rounded-0 text-dark">3<i class="bi bi-star-fill ms-1"></i></span></div>
-                  <div class="flex-grow-1">
-                    <p class="mb-2">This is some content from a media component. You can replace this with any content and adjust it as needed.</p>
-                    <div class="review-img">
-                      <img src="assets/images/featured-products/04.webp" alt="" width="70">
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
-                      <div class="hstack flex-grow-1 gap-3">
-                        <p class="mb-0">Jhon Deo</p>
-                        <div class="vr"></div>
-                        <div class="date-posted">22 June 2022</div>
-                      </div>
-                      <div class="hstack">
-                        <div class=""><i class="bi bi-hand-thumbs-up me-2"></i>98</div>
-                        <div class="mx-3"></div>
-                        <div class=""><i class="bi bi-hand-thumbs-down me-2"></i>41</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="d-flex flex-column flex-lg-row gap-3">
-                  <div class=""><span class="badge bg-danger rounded-0">2<i class="bi bi-star-fill ms-1"></i></span></div>
-                  <div class="flex-grow-1">
-                    <p class="mb-2">You can replace this with any content and adjust it as needed. Some quick example text to build on the card title and make.</p>
-                    <div class="review-img">
-                      <img src="assets/images/featured-products/01.webp" alt="" width="70">
-                    </div>
-                    <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
-                      <div class="hstack flex-grow-1 gap-3">
-                        <p class="mb-0">Jhon Deo</p>
-                        <div class="vr"></div>
-                        <div class="date-posted">22 June 2022</div>
-                      </div>
-                      <div class="hstack">
-                        <div class=""><i class="bi bi-hand-thumbs-up me-2"></i>26</div>
-                        <div class="mx-3"></div>
-                        <div class=""><i class="bi bi-hand-thumbs-down me-2"></i>89</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="text-center">
-                  <a href="javascript:;" class="btn btn-ecomm btn-outline-dark">View All Reviws<i class="bi bi-arrow-right ms-2"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!--end row-->
-    </div>
-  </section>
-  <!--start product details-->
-
-
-  <!--start product details-->
-  <section class="section-padding">
-    <div class="container">
-      <div class="separator pb-3">
-        <div class="line"></div>
-        <h3 class="mb-0 h3 fw-bold">Similar Products</h3>
-        <div class="line"></div>
-      </div>
-      <div class="similar-products">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4">
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/best-sellar/03.webp" alt="" class="card-img-top rounded-0">
                 <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
+                  <h5 class="mb-0 fw-bold product-short-title" title="<?= htmlspecialchars($sim['name']) ?>">
+                    <?= mb_strimwidth(htmlspecialchars($sim['name']), 0, 40, '...') ?>
+                  </h5>
                   <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
+                    <div class="h6 fw-bold">$<?= number_format($sim['price'], 2, ',', '.') ?></div>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/new-arrival/02.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/best-sellar/02.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/new-arrival/04.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/new-arrival/05.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/trending-product/03.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/featured-products/05.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/trending-product/05.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/trending-product/01.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="javascript:;">
-              <div class="card rounded-0">
-                <img src="assets/images/trending-product/02.webp" alt="" class="card-img-top rounded-0">
-                <div class="card-body border-top">
-                  <h5 class="mb-0 fw-bold product-short-title">Syndrona</h5>
-                  <p class="mb-0 product-short-name">Color Printed Kurta</p>
-                  <div class="product-price d-flex align-items-center gap-3 mt-2">
-                    <div class="h6 fw-bold">$458</div>
-                    <div class="h6 fw-light text-muted text-decoration-line-through">$2089</div>
-                    <div class="h6 fw-bold text-danger">(70% off)</div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
         </div>
         <!--end row-->
       </div>
     </div>
   </section>
+<!--start more products in same category-->
+<section class="section-padding">
+  <div class="container">
+    <div class="separator pb-3">
+      <div class="line"></div>
+      <h3 class="mb-0 h3 fw-bold">Similar Products </h3>
+      <div class="line"></div>
+    </div>
+    <div class="similar-products">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4">
+        <?php
+        $cat_id = $product['category_id'];
+        $more_stmt = $pdo->prepare('SELECT * FROM products WHERE category_id = ? AND id != ? ORDER BY created_at DESC LIMIT 12');
+        $more_stmt->execute([$cat_id, $product['id']]);
+        $more_products = $more_stmt->fetchAll();
+        foreach ($more_products as $item) {
+          echo '<div class="col">
+            <a href="product-details.php?id=' . $item['id'] . '">
+              <div class="card rounded-0">
+                <img src="assets/images/product-images/' . htmlspecialchars($item['thumbnail']) . '" alt="' . htmlspecialchars($item['name']) . '" class="card-img-top rounded-0" style="object-fit:cover; height:200px; width:100%;">
+                <div class="card-body border-top">
+                  <h5 class="mb-0 fw-bold product-short-title" title="' . htmlspecialchars($item['name']) . '">' . mb_strimwidth(htmlspecialchars($item['name']), 0, 40, '...') . '</h5>
+                  <div class="product-price d-flex align-items-center gap-3 mt-2">
+                    <div class="h6 fw-bold">$' . number_format($item['price'], 2, ',', '.') . '</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>';
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+</section>
   <!--end product details-->
 
 
@@ -432,20 +178,38 @@ $images = $img_stmt->fetchAll();
 
 
 <?php include 'footer.php'; ?>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/toastr.min.js"></script>
 <script>
-document.getElementById('addToCartBtn').onclick = function() {
-  fetch('add_to_cart.php', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: 'id=<?= $product['id'] ?>&qty=1'
-  })
-  .then(res => res.json())
-  .then(data => {
-    if (data.success) {
-      alert('Đã thêm vào giỏ hàng!');
+$('#addToCartBtn').on('click', function() {
+  $.post('add_to_cart.php', {id: <?= $product['id'] ?>, qty: 1}, function(data) {
+    var res = typeof data === 'string' ? JSON.parse(data) : data;
+    if (res.success) {
+      toastr.success('Added to cart!');
     } else {
-      alert(data.message);
+      toastr.error(res.message || 'Add to cart failed!');
     }
   });
-};
+});
 </script>
+          <?php
+          $cat_id = $product['category_id'];
+          $sim_stmt = $pdo->prepare('SELECT * FROM products WHERE category_id = ? AND id != ? ORDER BY created_at DESC LIMIT 8');
+          $sim_stmt->execute([$cat_id, $product['id']]);
+          $similar_products = $sim_stmt->fetchAll();
+          foreach ($similar_products as $sim) {
+            echo '<div class="col">
+              <a href="product-details.php?id=' . $sim['id'] . '">
+                <div class="card rounded-0">
+                  <img src="assets/images/product-images/' . htmlspecialchars($sim['thumbnail']) . '" alt="' . htmlspecialchars($sim['name']) . '" class="card-img-top rounded-0" style="object-fit:cover; height:200px; width:100%;">
+                  <div class="card-body border-top">
+                    <h5 class="mb-0 fw-bold product-short-title" title="' . htmlspecialchars($sim['name']) . '">' . mb_strimwidth(htmlspecialchars($sim['name']), 0, 40, '...') . '</h5>
+                    <div class="product-price d-flex align-items-center gap-3 mt-2">
+                      <div class="h6 fw-bold">$' . number_format($sim['price'], 2, ',', '.') . '</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>';
+          }
+          ?>
