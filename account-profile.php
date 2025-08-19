@@ -93,18 +93,7 @@ $user = $stmt->fetch();
                         <td>Email ID</td>
                         <td><?= !empty($user['email']) ? htmlspecialchars($user['email']) : 'N/A' ?></td>
                       </tr>
-                      <tr>
-                        <td>Gender</td>
-                        <td><?= !empty($user['gender']) ? htmlspecialchars($user['gender']) : 'N/A' ?></td>
-                      </tr>
-                      <tr>
-                        <td>DOB</td>
-                        <td><?= !empty($user['dob']) ? htmlspecialchars($user['dob']) : 'N/A' ?></td>
-                      </tr>
-                      <tr>
-                        <td>Location</td>
-                        <td><?= !empty($user['address']) ? htmlspecialchars($user['address']) : 'N/A' ?></td>
-                      </tr>
+                      
                     </tbody>
                   </table>
                 </div>
